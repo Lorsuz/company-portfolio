@@ -20,10 +20,20 @@
   outline: none;
   color: var(--black-color-main);
   text-decoration: none;
+  transition: 300ms;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+body::-webkit-scrollbar-thumb {
+  background: #000;
 }
 body > .whatsApp-contact {
   position: fixed;
@@ -50,7 +60,8 @@ header {
   justify-content: space-between;
   padding: 10px 50px;
   align-items: center;
-  background: #DDDDDD;
+  background: rgba(0, 0, 0, 0.7647058824);
+  backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
   left: 0;
@@ -60,10 +71,30 @@ header {
 header .header__logo img {
   width: 300px;
 }
+header .header__logo a {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 100;
+}
+header .header__logo a span {
+  font-size: 2.5rem;
+  font-family: cursive;
+  color: var(--white-color-main);
+  font-weight: 900;
+}
 header .header__navbar ul {
   display: flex;
   gap: 30px;
 }
+header .header__navbar ul li a {
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+header .header__navbar ul li a:hover {
+  text-decoration: underline;
+}
+
 main > article .article__container {
   width: 80%;
   margin: auto;
@@ -106,7 +137,7 @@ main > article.main__home-article .carousel .carousel_slide .slide__page .carous
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0) 30%, #000);
+  background: linear-gradient(rgba(0, 0, 0, 0.5137254902), #000000 80%);
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page section {
   width: 100%;
@@ -124,30 +155,32 @@ main > article.main__home-article .carousel .carousel_slide .slide__page section
 main > article.main__home-article .carousel .carousel_slide .slide__page section h1 {
   font-size: 4rem;
   color: var(--white-color-main);
-  background: var(--black-color-sub);
   width: 100%;
   text-align: center;
   padding: 10px 0;
+  font-weight: 100;
   margin-bottom: 20px;
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page section h2 {
   font-size: 2rem;
   margin-bottom: 50px;
+  color: var(--white-color-sub);
+  font-weight: 100;
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page section a {
   font-size: 1.5rem;
-  background: var(--black-color-sub);
+  font-weight: 100;
   display: inline-block;
   padding: 15px 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 5px;
-  font-weight: bold;
   color: var(--white-color-main);
   cursor: pointer;
+  transition: 300ms;
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page section a:hover {
   background: var(--black-color-main);
+  outline: 2px solid var(--black-color-sub);
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page.toRightOld {
   animation: toRightOld 500ms ease-in-out;
@@ -215,6 +248,7 @@ main > article.main__home-article .carousel .carousel_next-button {
   transform: translateY(-50%);
   cursor: pointer;
   padding: 10px 5px;
+  background: transparent;
 }
 main > article.main__home-article .carousel .carousel_prev-button:hover > i,
 main > article.main__home-article .carousel .carousel_next-button:hover > i {
@@ -228,6 +262,7 @@ main > article.main__home-article .carousel .carousel_next-button.blocked {
 main > article.main__home-article .carousel .carousel_prev-button i,
 main > article.main__home-article .carousel .carousel_next-button i {
   font-size: 30px;
+  color: #9b9b9b;
   transition: 200ms;
   pointer-events: none;
 }
@@ -252,6 +287,8 @@ main > article.main__home-article .carousel .carousel__pagination .dot {
 main > article.main__who-article .container__profiles {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px 30px;
 }
 main > article.main__who-article .container__profiles .profile__card {
   box-shadow: 5px 5px 20px #ccc;
@@ -283,6 +320,7 @@ main > article.main__who-article .container__profiles .profile__card .card__deta
   text-align: center;
   font-weight: bold;
   color: #9f9f9f;
+  display: block;
 }
 main > article.main__services-article * {
   user-select: none;
@@ -322,6 +360,7 @@ main > article.main__projects-article .container__projects .project__card .card_
 main > article.main__projects-article .container__projects .project__card .card__details h3 {
   margin-bottom: 10px;
   font-size: 2.5rem;
+  font-weight: 400;
 }
 main > article.main__projects-article .container__projects .project__card .card__details .details__tags {
   margin-bottom: 20px;
@@ -342,6 +381,7 @@ main > article.main__projects-article .container__projects .project__card .card_
   -ms-hyphens: auto;
   text-align: justify;
   line-height: 1.5rem;
+  font-weight: 300;
 }
 main > article.main__projects-article .container__projects .project__card.card--inverted .card__img {
   order: 2;
@@ -384,6 +424,13 @@ footer .social-media li a {
 }
 footer .social-media li a i {
   font-size: 1.5rem;
+  color: #000000;
+}
+footer .social-media li a:hover {
+  background: #000000;
+}
+footer .social-media li a:hover i {
+  color: #ffffff;
 }
 footer p {
   text-align: center;
