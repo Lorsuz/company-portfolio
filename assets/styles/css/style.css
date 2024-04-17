@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 :root {
   --primary-color: #026842;
   --primary-color-soft: #009d51;
@@ -15,6 +16,7 @@
   list-style: none;
   border: none;
   box-sizing: border-box;
+  font-family: "Inter";
   outline: none;
   color: var(--black-color-main);
   text-decoration: none;
@@ -72,11 +74,9 @@ main > article .article__container h2 {
   font-size: 2.5rem;
   position: relative;
   text-transform: uppercase;
-  display: inline-block;
-  background: var(--black-color-main);
-  color: #fff;
-  padding: 10px 50px;
+  display: block;
   margin: 0 auto 100px;
+  font-weight: 200;
 }
 main > article.main__home-article .carousel {
   height: 100vh;
@@ -351,6 +351,53 @@ main > article.main__projects-article .container__projects .project__card.card--
 }
 main > article.main__projects-article .container__projects .project__card.card--inverted .card__details * {
   text-align: end;
+}
+
+footer {
+  background: url("./../../images/background/footer-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+footer .gradient-bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6862745098);
+  z-index: 0;
+}
+footer .social-media {
+  z-index: 100;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+footer .social-media li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  border-radius: 50%;
+  background: #fff;
+  aspect-ratio: 1/1;
+}
+footer .social-media li a i {
+  font-size: 1.5rem;
+}
+footer p {
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+footer p a {
+  color: #fff;
+  font-weight: 700;
+}
+footer p a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
