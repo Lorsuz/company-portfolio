@@ -227,6 +227,7 @@ main {
 								color: var(--white-color-main);
 								cursor: pointer;
 								transition: 300ms;
+								outline: 2px solid var(--black-color-sub);
 
 								&:hover {
 
@@ -319,18 +320,18 @@ main {
 					cursor: pointer;
 					padding: 10px 5px;
 					background: transparent;
-					
+
 					&:hover {
 						> i {
 							font-size: 40px;
 						}
 					}
-					
+
 					&.blocked {
 						opacity: 0.5;
 						pointer-events: none;
 					}
-					
+
 					i {
 						font-size: 30px;
 						color: #9b9b9b;

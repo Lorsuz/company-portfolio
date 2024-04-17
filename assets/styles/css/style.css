@@ -177,6 +177,7 @@ main > article.main__home-article .carousel .carousel_slide .slide__page section
   color: var(--white-color-main);
   cursor: pointer;
   transition: 300ms;
+  outline: 2px solid var(--black-color-sub);
 }
 main > article.main__home-article .carousel .carousel_slide .slide__page section a:hover {
   background: var(--black-color-main);
