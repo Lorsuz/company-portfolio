@@ -227,12 +227,12 @@ main {
 								color: var(--white-color-main);
 								cursor: pointer;
 								transition: 300ms;
-								outline: 2px solid var(--black-color-sub);
+								border: 2px solid var(--black-color-main);
 
 								&:hover {
 
 									background: var(--black-color-main);
-									outline: 2px solid var(--black-color-sub);
+									border-color: var(--white-color-sub);
 								}
 							}
 						}
